@@ -7,13 +7,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Componenetes',
-      debugShowCheckedModeBanner: false,
-      home: Scaffold(
-          appBar: AppBar(
-            title: Text('Componentes'),
-          ),
-          body: HomePagesTemps()),
-    );
+        title: 'Componenetes',
+        debugShowCheckedModeBanner: false,
+        home: HomePagesTemps());
   }
 }
