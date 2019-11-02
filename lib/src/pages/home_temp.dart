@@ -14,7 +14,9 @@ class HomePagesTemps extends StatelessWidget {
     );
   }
 
-  List<Widget> _crearItems() {
+  /*
+
+    List<Widget> _crearItems() {
     List<Widget> lista = new List<Widget>();
     for (String opt in opciones) {
       final tempWidget = ListTile(
@@ -25,6 +27,8 @@ class HomePagesTemps extends StatelessWidget {
 
     return lista;
   }
+
+*/
 
   List<Widget> _crearItemCorta() {
     var widgets = opciones.map((item) {
@@ -44,3 +48,19 @@ class HomePagesTemps extends StatelessWidget {
     return widgets;
   }
 }
+
+/* 
+final List<String> entries  = <String>['Primera','Segunda','Tercera'];
+
+ListView.Builder(
+    padding: const EdgeInsets.all(8),
+    itemCount: entries.length,
+    itemBuilder: (BuildContext Context, int index){
+      return Container(
+        height: 50,
+        child: Center(child: Text('Entry ${entries[index]}')),
+      );
+    }
+
+);
+*/
