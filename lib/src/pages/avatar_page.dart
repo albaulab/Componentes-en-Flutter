@@ -5,6 +5,7 @@ class AvatarPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.black,
         title: Text('Avatar Page'),
         actions: <Widget>[
           Container(
@@ -24,12 +25,15 @@ class AvatarPage extends StatelessWidget {
           )
         ],
       ),
-      body: Center(
-        child: FadeInImage(
-          image: NetworkImage(
-              'https://static01.nyt.com/images/2018/11/13/obituaries/13LEE3/13LEE3-facebookJumbo.jpg'),
-          placeholder: AssetImage('assets/jar.gif'),
-          fadeInDuration: Duration(milliseconds: 200),
+      body: Container(
+        color: Colors.black12,
+        child: Center(
+          child: FadeInImage(
+            image: NetworkImage(
+                'https://static01.nyt.com/images/2018/11/13/obituaries/13LEE3/13LEE3-facebookJumbo.jpg'),
+            placeholder: AssetImage('assets/jar.gif'),
+            fadeInDuration: Duration(milliseconds: 200),
+          ),
         ),
       ),
     );
