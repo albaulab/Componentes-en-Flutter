@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # componenetesapp
+=======
+# Componentes
+>>>>>>> d1f0bff0d8e44bb5e42b1d97a442ace66b2d4600
 
 A new Flutter project.
 
