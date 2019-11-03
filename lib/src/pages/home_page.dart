@@ -8,7 +8,8 @@ class HomePages extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Componenetes'),
+        backgroundColor: Colors.black,
+        title: Text('Flutter Componentes App'),
       ),
       body: _lista(),
     );
