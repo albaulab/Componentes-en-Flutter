@@ -19,8 +19,6 @@ class MyApp extends StatelessWidget {
       initialRoute: '/',
       routes: getApplicationRoutes(),
       onGenerateRoute: (settings) {
-        print('Ruta Llamada :  ${settings.name}');
-
         return MaterialPageRoute(builder: (context) => CardPage());
       },
     );
