@@ -199,7 +199,9 @@ class _InputPageState extends State<InputPage> {
           items: getOpcionesDropdown(),
           onChanged: (opt) {
             // print(opt);
-            _opcionesSelecionadas = opt;
+            setState(() {
+              _opcionesSelecionadas = opt;
+            });
           },
         ),
       ],

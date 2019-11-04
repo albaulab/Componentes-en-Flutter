@@ -7,6 +7,7 @@ class SliderPages extends StatefulWidget {
 
 class _SliderPagesState extends State<SliderPages> {
   double _valorSlider = 100.0;
+  bool _bloquearCheck = false;
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +19,14 @@ class _SliderPagesState extends State<SliderPages> {
       body: Container(
           padding: EdgeInsets.only(top: 50.0),
           child: Column(
-            children: <Widget>[_crearSlider(), Expanded(child: _crearImagen())],
+            children: <Widget>[
+              _crearSlider(),
+              _crearSwitch(),
+              _crearCheckBox(),
+              Expanded(
+                child: _crearImagen(),
+              ),
+            ],
           )),
     );
   }
@@ -31,9 +39,32 @@ class _SliderPagesState extends State<SliderPages> {
       value: _valorSlider,
       min: 10,
       max: 400.0,
+      onChanged: (_bloquearCheck)
+          ? null
+          : (valor) {
+              setState(() {
+                _valorSlider = valor;
+              });
+            },
+    );
+  }
+
+  Widget _crearCheckBox() {
+    // return Checkbox(
+    //   value: _bloquearCheck,
+    //   onChanged: (valor) {
+    //     setState(() {
+    //       _bloquearCheck = valor;
+    //     });
+    //   },
+    // );
+
+    return CheckboxListTile(
+      title: Text('Bloquear Slider'),
+      value: _bloquearCheck,
       onChanged: (valor) {
         setState(() {
-          _valorSlider = valor;
+          _bloquearCheck = valor;
         });
       },
     );
@@ -44,6 +75,18 @@ class _SliderPagesState extends State<SliderPages> {
       image: NetworkImage('http://pngimg.com/uploads/batman/batman_PNG111.png'),
       width: _valorSlider,
       fit: BoxFit.contain,
+    );
+  }
+
+  Widget _crearSwitch() {
+    return SwitchListTile(
+      title: Text('Bloquear Slider'),
+      value: _bloquearCheck,
+      onChanged: (valor) {
+        setState(() {
+          _bloquearCheck = valor;
+        });
+      },
     );
   }
 }
